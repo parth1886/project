@@ -1,0 +1,20 @@
+<h1>DNS Recon Results for {{ results.0.url }}</h1>
+<table>
+  <thead>
+    <tr>
+      <th>DNS Record</th>
+      <th>DNS Value</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for result in results %}
+      <tr>
+        <td>{{ result.dns_record }}</td>
+        <td>{{ result.dns_value }}</td>
+        <td>{{ result.created_at }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p><a href="{% url 'dns_recon' %}">Perform another DNS Recon</a></p>

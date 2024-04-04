@@ -1,0 +1,642 @@
+{% extends 'base.html' %}
+{% block title %}
+TCP Scanner
+{% endblock title %}
+
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+   <head>
+    {% block header %}
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="index,follow,noodp">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Pentest-Tools.com">
+      <meta property="fb:app_id" content="264315854616682">
+      <meta property="fb:page_id" content="264315854616682">
+      <meta name="google-site-verification" content="ZN4XXxE19ahONIGM12FD1rX3tMFOYSOdtNh4DG_JtjQ">
+      <meta name="ahrefs-site-verification" content="5b22a25317136dc0e2eee9986720f20eaa83ef1e2b67ffc7f966a6da2408e541">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="description" content="Use Nmap Online portscan to find open TCP ports and services on target servers. Free port checker or port scanner, map network perimeter &amp; attack surface.">
+      <meta property="og:description" content="Use Nmap Online portscan to find open TCP ports and services on target servers. Free port checker or port scanner, map network perimeter &amp; attack surface.">
+      <meta name="twitter:description" content="Use Nmap Online portscan to find open TCP ports and services on target servers. Free port checker or port scanner, map network perimeter &amp; attack surface.">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/entry.21067bea.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/Accordion.fbd02594.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/BaseButton.db5d78e6.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/ContentBlockBody.446ec86d.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/ContentBlock.63d5af38.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/ContentBlockTitle.9ac95d7c.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/Robot.8e997a5b.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/TestimonialTabs.04fd7a9f.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/BaseInput.3e8a6278.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/TestimonialInline.4c2b5dcb.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/TCP scanner_files/Review.6b89c827.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/entry.21067bea.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/Accordion.fbd02594.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/BaseButton.db5d78e6.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/ContentBlockBody.446ec86d.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/ContentBlock.63d5af38.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/ContentBlockTitle.9ac95d7c.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/Robot.8e997a5b.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/TestimonialTabs.04fd7a9f.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/BaseInput.3e8a6278.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/TestimonialInline.4c2b5dcb.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/Review.6b89c827.css' %}">
+      <link href="https://www.googletagmanager.com/" rel="preconnect">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/TheHeader.e3ce70fa.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/Alert.1eedfcaf.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/TestimonialCentered.47393e98.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/FaqItem.729d7574.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/BaseSection.8443c845.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/web-application-penetration-testing.261b2f10.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/ToolPageTechnicalDetails.90804bec.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/BaseTable.a3a3f0b2.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/DocsCodeBlock.59e04287.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/free.e337e9dc.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/TCP scanner_files/ToolGrid.0c17335c.css' %}">
+      {% endblock %}
+   </head>
+   <body>
+      <div id="__nuxt">
+         <div>
+            <!--[-->
+            <div class="bg-gray-900 font-sans antialiased">
+               <div class="sr-only focus-within:not-sr-only focus-within:absolute focus-within:top-4 focus-within:left-4 focus-within:z-130"><a href="https://pentest-tools.com/network-vulnerability-scanning/tcp-port-scanner-online-nmap#main" class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-light-blue-500 focus:ring-offset-2"> Skip to main content </a></div>
+               <div aria-live="polite">
+                  <!---->
+               </div>
+               
+               <main id="main" class="bg-white">
+                  <!--[--><!--[-->
+                  <div>
+                     <div class="relative">
+                        <!---->
+                        <div data-v-9a44d66f="" class="relative overflow-hidden bg-gray-900" data-nosnippet="true">
+                           <div data-v-9a44d66f="" aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                           <div data-v-9a44d66f="" class="relative my-5 sm:my-12 md:my-16 lg:my-20 xl:mt-24 xl:mb-32">
+                              <div data-v-9a44d66f="" class="mx-auto max-w-screen-xl">
+                                 <div data-v-9a44d66f="" class="flex space-y-5 px-5 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:space-y-0 xl:px-10 flex-col-reverse space-y-reverse">
+                                    <div data-v-9a44d66f="" class="relative sm:text-center lg:text-left xl:col-span-6 xl:ml-0 lg:col-span-7">
+                                       <div data-v-9a44d66f="" class="absolute inset-x-0 bottom-0 flex justify-center lg:inset-auto lg:inset-y-0 lg:right-0 lg:items-center lg:justify-start" aria-hidden="true">
+                                          <svg data-v-9a44d66f="" class="hidden h-5 w-5 translate-y-full transform text-[#313438] supports-backdrop-filter:text-light-blue-200 supports-backdrop-filter:text-opacity-10 lg:block lg:translate-y-0 lg:translate-x-full lg:-rotate-90" viewBox="0 0 100 100" fill="currentColor">
+                                             <polygon data-v-9a44d66f="" points="0 0, 100 0, 50 75"></polygon>
+                                          </svg>
+                                       </div>
+                                       <div data-v-9a44d66f="" class="tool-block relative overflow-hidden rounded-lg p-5 supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl xl:p-10">
+                                          <div data-v-9a44d66f="" class="flex flex-wrap gap-2">
+                                             <a data-v-9a44d66f="" href="" class="underline font-semibold uppercase tracking-wide text-primary-accent-500 hover:text-white">Infrastructure Testing</a>
+                                          </div>
+                                          <h1 data-v-9a44d66f="" class="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl xl:text-6xl">TCP Port Scan with Nmap</h1>
+                                          <div data-v-9a44d66f="" class="tool-description mt-5 space-y-4 text-light-blue-100 text-opacity-60 sm:mt-5 sm:text-xl lg:max-w-2xl lg:text-lg xl:text-xl">
+                                             <p><strong>Find open ports</strong> and running services (incl. versions), and do OS fingerprinting in a single <strong>TCP port check</strong>. Inspect Top 100 TCP ports for free or get a paid plan to automate and schedule extensive custom scans for even more ports. </p>
+                                          </div>
+                                          <div data-v-9a44d66f="" class="mt-5 flex flex-col divide-y divide-light-blue-100 divide-opacity-10 sm:flex-row sm:justify-center sm:space-y-0 sm:divide-y-0 sm:divide-x lg:flex-col lg:justify-evenly lg:space-y-3 lg:divide-x-0 lg:divide-y xl:flex-row xl:justify-start xl:space-y-0 xl:divide-y-0 xl:divide-x">
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Sample report 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="https://pentest-tools.com/network-vulnerability-scanning/tcp-port-scanner-online-nmap#use-cases" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Use cases 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="https://pentest-tools.com/network-vulnerability-scanning/tcp-port-scanner-online-nmap#technical-details" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                                      <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Technical details 
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div data-v-9a44d66f="" class="relative xl:col-span-6 lg:self-start lg:pt-16 lg:col-span-5">
+                                       <div data-v-9a44d66f="" id="toolHeader" class="tool-block relative overflow-hidden rounded-lg supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                          <div data-v-9a44d66f="" class="hidden p-5 text-center sm:block lg:text-left xl:p-10">
+                                             <h2 class="text-sm font-bold tracking-tight text-white sm:text-2xl"> Run a TCP Port Scan online </h2>
+                                             <p class="tool-description mt-3 hidden text-sm text-light-blue-100 text-opacity-60 lg:max-w-lg lg:text-base"> Enjoy free light scans every day for most tools on our platform! </p>
+                                          </div>
+                                          <div data-v-9a44d66f="" class="NewWebsiteToolForm overflow-hidden rounded-lg bg-white shadow-2xl md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                             <div class="flex flex-col justify-between overflow-hidden rounded-lg shadow-2xl shadow-dark-blue-500/10" id="toolForm">
+                                                <div class="flex-1">
+                                                   <dl>
+                                                      <dt class="sr-only">Scan type</dt>
+                                                      <dd>
+                                                        
+                                                      </dd>
+                                                   </dl>
+                                                   <div aria-live="assertive" class="relative space-y-6 overflow-hidden bg-light-blue-50 px-5 py-6 xl:p-10">
+                                                      <div class="space-y-6" data-testid="tool-form">
+                                                         <form class="space-y-4" aria-label="Scan with tool" method="post">
+                                                            {% csrf_token %}
+                                                            {{ form.as_p }}
+                                                           <!--<div data-v-2feb1a0a="" class="space-y-2">
+                                                               <div data-v-2feb1a0a="" class="space-y-1">
+                                                                  <div data-v-2feb1a0a="" class="flex items-center justify-between">
+                                                                     <label data-v-2feb1a0a="" for="ptt-input-2" class="cursor-pointer text-xs font-semibold text-dark-blue-400">Target</label>
+                                                                  </div>
+                                                                  <div data-v-2feb1a0a="" class="relative rounded-md shadow-sm">
+                                                                    <input data-v-2feb1a0a="" type="text" modelmodifiers="[object Object]" name="url" inputmode="url" autocorrect="off" spellcheck="false" placeholder="IP or Hostname" id="url" class="sm:text-sm" required>
+                                                                  </div>
+                                                               </div>
+                                                              
+                                                            </div>-->
+                                                            <div class="space-y-4 xl:space-y-0 xl:grid xl:grid-cols-2 xl:items-center xl:gap-3">
+                                                               
+                                                               <div>
+                                                                  <button type="submit" value="submit" class="flex w-full items-center justify-center rounded-md bg-secondary-accent-500 px-4 py-2.5 font-semibold text-dark-blue-500 shadow-sm transition hover:bg-secondary-accent-400 focus:bg-secondary-accent-400 focus:outline-none focus:ring focus:ring-secondary-accent-500 disabled:pointer-events-none disabled:opacity-75">
+                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 -ml-1 flex-shrink-0">
+                                                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                                                                     </svg>
+                                                                     Scan target
+                                                                  </button>
+                                                               </div>
+                                                            </div>
+                                                         </form>
+                                                         <!----><!----><!---->
+                                                      </div>
+                                                      <!---->
+                                                   </div>
+                                                   <!----><!----><!----><!---->
+                                                </div>
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!---->
+                     </div>
+                     <section>
+                        <div class="mx-auto max-w-2xl px-5 pt-16 xl:max-w-4xl xl:px-20 xl:pt-24">
+                           <div class="relative">
+                              
+                              <p class="text-base font-semibold uppercase tracking-wide text-primary-accent-500">TCP Port Scanner with Nmap</p>
+                              <h2 class="BadgeTitle relative z-10 mt-2 pr-8 text-3xl font-extrabold leading-8 tracking-tight text-dark-blue-700 sm:text-4xl"> About this TCP Port Scan with Nmap</h2>
+                           </div>
+                           <div class="prose prose-xl prose-brand mx-auto mt-6 lg:mt-10">
+                              <p> Our <strong>open port checker</strong> provides an easy and fast way to run an <strong>online Nmap scan</strong> with zero setup and maintenance. Compared to using Nmap on your local machine, it’s much more effective to <strong>check all open ports</strong> from our cloud platform because the TCP Scanner on Pentest-Tools.com gives you the external perspective of your target that any attacker has. </p>
+                              <p> The Full version of this TCP Port Scanner with Nmap lets you <strong>scan open ports</strong> with custom settings right away. Our pre-configured <strong>open port scanner</strong> comes with an easy-to-use interface over Nmap’s complex command line parameters. From your online account, you can: </p>
+                              <ul>
+                                 <li>Indicate custom TCP ports to scan (1-65535)</li>
+                                 <li>Enable and disable service detection, operating system detection, and host discovery</li>
+                                 <li>Do Traceroute</li>
+                                 <li>Do port scans directly against services inside networks with the VPN agent.</li>
+                              </ul>
+                              <p> For even more effective port scanning, our tool supports scheduled and parallel scans (with notifications), automated Nmap scans with scan templates and pentest robots, and automatic attack surface mapping. </p>
+                              <p> Each port check produces a professional report you can share with clients, managers, and other decision-makers. We also keep our port scan tool up to date through constant improvements in functionality, performance, and integration with the other <a href="https://pentest-tools.com/alltools" class="">platform tools</a> and features. </p>
+                              <div class="relative overflow-hidden rounded-lg shadow-2xl shadow-dark-blue-500/20 border-t-6 border-light-blue-200 bg-white not-prose">
+                                 <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                                 
+                                 <!---->
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                     <section>
+                        <div id="sample-report" class="overflow-hidden bg-light-blue-50 py-16 lg:py-24 bg-transparent" data-nosnippet="true">
+                           <div class="mx-auto max-w-xl px-5 lg:max-w-screen-xl xl:px-20">
+                              <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+                                 <div class="relative">
+                                    <p class="section-highlight">Reporting</p>
+                                    <h2 class="mt-5 text-3xl font-extrabold leading-8 tracking-tight text-dark-blue-700 sm:text-4xl">Sample TCP Port Scan with Nmap report</h2>
+                                    <p class="mx-auto mt-5 max-w-3xl text-xl text-dark-blue-400"> Here is a sample report from our TCP Port Scan with Nmap that gives you a taste of how our tools save you time and reduce repetitive manual work. </p>
+                                    <ul class="mt-10 space-y-5">
+                                       <li data-v-2d2b538d="" class="flex space-x-2">
+                                          <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                             </svg>
+                                          </div>
+                                          <div data-v-2d2b538d="" data-content-block="" class="">
+                                             <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Accurate port scanning results</h3>
+                                             <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> The “check if the host is alive” option ensures the IP addresses and hostnames included in the report are active. This way, you can trust that every IP scan online returns reliable data for your penetration test or vulnerability assessment. </p>
+                                          </div>
+                                       </li>
+                                       <li data-v-2d2b538d="" class="flex space-x-2">
+                                          <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                             </svg>
+                                          </div>
+                                          <div data-v-2d2b538d="" data-content-block="" class="">
+                                             <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Information at a glance</h3>
+                                             <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> The portscan report turns the raw output of our TCP scanner into preformatted tables which anyone can quickly go through. We make it easy to find open ports on IP addresses and hostnames in every port finder report, no matter how many it includes. </p>
+                                          </div>
+                                       </li>
+                                       <li data-v-2d2b538d="" class="flex space-x-2">
+                                          <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                             </svg>
+                                          </div>
+                                          <div data-v-2d2b538d="" data-content-block="" class="">
+                                             <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Indispensable reports – without the noise</h3>
+                                             <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Get laser-focused notifications for the scan results which matters the most for your work (e.g. specific open ports and protocols detected). Paid plans give you access to port search reports you can export in PDF, JSON, and HTML. </p>
+                                          </div>
+                                       </li>
+                                       <li data-v-2d2b538d="" class="flex space-x-2">
+                                          <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                             </svg>
+                                          </div>
+                                          
+                                       </li>
+                                    </ul>
+                                    <div class="mt-10 flex justify-center lg:justify-start">
+                                       <a data-v-1c9188de="" href="" data-variant="primary" class="inline-flex cursor-pointer touch-none select-none items-center justify-center whitespace-nowrap border text-center font-semibold tracking-tight transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-75 btn-lg btn-primary" download="Pentest-Tools.com TCP Port Scanner Sample Report.pdf">
+                                          <!---->
+                                          <span data-v-1c9188de="" aria-hidden="true" data-testid="icon" class="order-3 flex-shrink-0 mr-2 -ml-1">
+                                             <svg data-v-1c9188de="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="text-dark-blue-500">
+                                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                             </svg>
+                                          </span>
+                                          <span data-v-1c9188de="" class="order-3">Download sample report</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                        
+                        
+                        <section data-v-aab4f65d="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative" data-nosnippet="true" id="use-cases">
+                           <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                              <div data-v-aab4f65d="" class="relative lg:text-center">
+                                 <!----><!----><!---->
+                                 <p data-v-aab4f65d="" class="section-highlight mb-2">Use cases</p>
+                                 <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">How security pros use the TCP Port Scan with Nmap</h2>
+                                 <p data-v-aab4f65d="" data-section-description="" class="text-dark-blue-400 mt-4 max-w-3xl text-xl mx-auto"> Set yourself up for success during the reconnaissance stage. Use a reliable port checker to discover network services exposed to the Internet. Do an <strong>online Nmap scan</strong> to automatically map all the open TCP ports and services in your target’s attack surface. </p>
+                                 <!----><!---->
+                              </div>
+                              <div data-v-aab4f65d="" class="mt-10">
+                                 <ul class="relative mx-auto grid max-w-3xl gap-8 md:px-6 lg:px-0">
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Network Penetration Testing</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Scan IP addresses and hostnames in one click to get an <strong>aggregated view of all their open ports</strong>. Since our cloud platform has direct Internet connection, you get accurate findings fast from our portscanner that’s optimized for best performance and quality results. </p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Continuous Attack Surface Monitoring</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Schedule periodic port scans to <strong>continuously monitor your target’s attack surface</strong> and proactively close exploitable security holes. Audit all network entry points available on a target system with auto-delivered reports and drill-down options with dedicated pentest tools. </p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Firewall Rules Check-up</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Check if your firewall is correctly configured and if servers have <strong>unnecessary open TCP ports</strong>. By also looking at service versions, this open port finder indicates which server software is outdated and needs upgrading. </p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Asset Inventory</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Detect live hosts and TCP services exposed to the Internet to map the network perimeter of your target much faster. Our TCP port checker tells you which machines are outdated and risk being exploited by attackers looking to gain access to the internal network. </p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Optimized Workflow with Targeted Notifications</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Get notifications via webhooks, email, or Slack only when the scanner finds open ports beyond your default list. Reduce noise every time you do a port scan online and quickly respond to vulnerabilities that abuse services that require open ports (e.g. SMBleed and SMBGhost). </p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                             <path stroke-linecap="round" stroke-linejoin="round" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Sensitive Data Exposure Mitigation</h3>
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> With our IP port finder you can deliver actionable data to help clients and colleagues reduce the risk of sensitive data exposure through data breaches. Regularly check for open ports and close unused ones to avoid exposing data-rich network services such as FTP, SMB, RDP, and more. </p>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <!----><!---->
+                        </section>
+                        
+                        <div class="mx-auto my-24 max-w-3xl px-4 sm:px-6">
+                           <h2 class="mb-10 px-5 text-center text-xl lg:px-0 xl:text-3xl"><q>Great compliment to my toolbox! Easy to use.</q></h2>
+                           <blockquote data-v-a33a6bec="" class="border-t border-light-blue-200 pt-10 testimonial-inline relative">
+                              <div data-v-a33a6bec="" class="absolute inset-x-0 top-0 flex justify-center" aria-hidden="true">
+                                 <span data-v-a33a6bec="" class="quote-background -translate-y-1/2 transform px-2">
+                                    <svg data-v-a33a6bec="" class="text-primary-accent-500 h-8 w-auto" aria-hidden="true" viewBox="0 0 52 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="m51.72 9.541-.065-.422-.068.015a11.21 11.21 0 0 0-3.06-5.536 11.761 11.761 0 0 0-5.635-3.1 12.014 12.014 0 0 0-6.472.294 11.673 11.673 0 0 0-5.311 3.596 11.135 11.135 0 0 0-2.514 5.79c-.258 2.12.11 4.27 1.059 6.197a11.434 11.434 0 0 0 4.306 4.694 11.935 11.935 0 0 0 6.224 1.742c.578 0 1.133-.085 1.685-.163-.179.583-.363 1.176-.659 1.709-.295.774-.757 1.445-1.215 2.121-.384.732-1.06 1.227-1.558 1.853-.521.608-1.232 1.013-1.794 1.518-.552.528-1.276.792-1.851 1.164-.601.334-1.125.704-1.685.88l-1.397.558-1.229.495 1.255 4.874 1.547-.362c.495-.12 1.1-.262 1.786-.43.703-.126 1.452-.47 2.287-.784.822-.36 1.778-.599 2.665-1.174.891-.548 1.92-1.006 2.828-1.74.879-.756 1.939-1.412 2.722-2.372.855-.9 1.7-1.845 2.356-2.921.76-1.026 1.275-2.152 1.82-3.265.492-1.114.889-2.253 1.213-3.359.614-2.217.89-4.323.995-6.125.089-1.805.037-3.306-.072-4.392-.037-.453-.091-.905-.164-1.355Zm-28.515 0-.065-.422-.068.015a11.21 11.21 0 0 0-3.06-5.536 11.761 11.761 0 0 0-5.635-3.1 12.013 12.013 0 0 0-6.471.294 11.673 11.673 0 0 0-5.312 3.596 11.135 11.135 0 0 0-2.514 5.79c-.257 2.12.11 4.27 1.06 6.197a11.435 11.435 0 0 0 4.305 4.694 11.935 11.935 0 0 0 6.224 1.742c.578 0 1.133-.085 1.685-.163-.179.583-.363 1.176-.658 1.709-.296.774-.757 1.445-1.216 2.121-.384.732-1.06 1.227-1.558 1.853-.521.608-1.231 1.013-1.794 1.518-.552.528-1.275.792-1.85 1.164-.602.334-1.126.704-1.686.88l-1.397.558c-.78.309-1.226.49-1.226.49l1.255 4.874 1.547-.362c.495-.12 1.1-.262 1.786-.43.703-.126 1.452-.47 2.287-.784.821-.36 1.778-.598 2.664-1.174.892-.548 1.921-1.006 2.829-1.74.878-.756 1.939-1.412 2.721-2.372.856-.9 1.7-1.845 2.357-2.921.76-1.026 1.275-2.152 1.82-3.265a27.28 27.28 0 0 0 1.213-3.359c.614-2.217.889-4.323.995-6.125.088-1.805.036-3.306-.073-4.392a18.456 18.456 0 0 0-.165-1.35Z" fill="currentColor"></path>
+                                    </svg>
+                                 </span>
+                              </div>
+                              <div data-v-a33a6bec="" class="italic">
+                                 <p data-v-a33a6bec="" class="text-lg text-dark-blue-400 max-w-3xl"><q>Excellent with reconnaissance info, external scans. <br><br> The scans run quickly and the dashboard is easy to use. I like the attack surface feature. Organizing your scans and data is very simple to follow.</q></p>
+                              </div>
+                              
+                           </blockquote>
+                        </div>
+                     </section>
+                     <article data-v-aab4f65d="" data-v-b0bdac2c="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden bg-light-blue-50" data-nosnippet="true" id="technical-details">
+                        <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                           <div data-v-aab4f65d="" class="relative text-center">
+                              <!----><!----><!---->
+                              <p data-v-aab4f65d="" class="section-highlight mb-2">TCP Port Scan with Nmap</p>
+                              <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">Technical details</h2>
+                              <!----><!----><!---->
+                           </div>
+                           <div data-v-aab4f65d="" class="mt-10">
+                              <div data-v-b0bdac2c="" class="prose prose-brand mx-auto max-w-4xl">
+                                 <h3>What is a port scanner?</h3>
+                                 <p> A port scanner is a software application designed to <strong>check open ports</strong> on a server’s IP address or hostname by sending probe packets to TCP or UDP ports and checking the responses. Find specific details about each port scanning method below. </p>
+                                 <p> Security and IT specialists use an <strong>open port scanner tool</strong> to check how security policies are implemented and make accurate recommendations to reduce risk. </p>
+                                 <p> Malicious hackers also rely on <strong>public port scanners</strong> to discover exposed and outdated network services they can exploit to gain unauthorized access to a target. This is why offensive security pros need reliable <strong>port scanning tools</strong> to keep ahead of remote attackers and proactively reduce risk. </p>
+                                 <h3>Why use an online port scanner at all?</h3>
+                                 <p> The main benefit of using an online version of the Nmap port scanner (vs using it on your local machine) is that it gives you an external view of your systems as any malicious hacker from the Internet has. If you do the same scan from your internal network you may obtain different results because of various firewalls and network restrictions. Furthermore, our port scanner is: </p>
+                                 <ul>
+                                    <li>Already configured and ready to run</li>
+                                    <li>Periodically upgraded</li>
+                                    <li>Has an easy-to-use interface over the complex command line parameters of Nmap</li>
+                                    <li>Gives you a useful report that you can share with management or stakeholders</li>
+                                 </ul>
+                                 <p> The scanner allows you to easily map the network perimeter of a company, check firewall rules and verify if your services are reachable from the Internet. Based on Nmap Online, it performs accurate port discovery and service detection. </p>
+                                 <div class="flex flex-col justify-between overflow-hidden rounded-lg shadow-2xl shadow-dark-blue-500/10 border-t-6 border-light-blue-200 bg-white">
+                                    <div class="flex-1 py-5 px-4 sm:p-6">
+                                       <h3>What makes our TCP Scanner with Nmap different</h3>
+                                       <p><a href="https://nmap.org/" rel="external nofollow noopener noreferrer" target="_blank">Nmap</a> is the de-facto tool for <strong>finding open ports and services</strong> due to how effective it is. However, it takes a lot of manual work to use the Nmap at peak potential from the command line. That’s because it has lots of parameters and options that need to be well understood from the documentation. </p>
+                                       <p> That’s why we built an <strong>online port scanner</strong> on top of Nmap that comes pre-configured and always up to date. We handle performance and speed improvements so you can focus on using the results you get from our TCP <strong>open ports scanner</strong>. </p>
+                                       <p> Because it’s integrated into the Pentest-Tools.com cloud platform, this <strong>online port checker</strong> gives you rich options to continue your engagement. Reliable and easy to use network vulnerability scanners, web vulnerability scanners, offensive security tools, and automation features (e.g. attack surface mapping) are one click away and provide support for your entire penetration testing workflow. </p>
+                                       
+                                       
+                                    </div>
+                                    <!---->
+                                 </div>
+                                 <h3>What to do after running the TCP Port Scanner with Nmap online</h3>
+                                 <p> After you <strong>check website open ports</strong> or do an <strong>IP port scan</strong>, you can act on the findings right from the list of results. A handy drop-down gives you the option to further scan open ports with various tools such as our Website Scanner, Network Vulnerability Scanner, URL Fuzzer, and Website Recon (for either URLs or IPs). </p>
+                                 
+                                 <p> The arsenal of reconnaissance tools on our cloud platform also includes dedicated scanners that help you Find Domains, Find Subdomains, Find Virtual Hosts, find juicy information with Google Hacking, and perform a thorough UDP Port Scan. </p>
+                                 <p> To save even more precious time, ready-to-use scan templates which group multiple tools in one bundle sit at your fingertips. Just like scan templates, pentest robots are also customizable or you can build your own and reuse them to fine-tune engagements and do your best work. </p>
+                                 <div aria-hidden="true" class="not-prose px-4 lg:float-left lg:w-96">
+                                    <div class="flex flex-col items-center bg-transparent p-0">
+                                       <span data-testid="badge" class="inline-flex items-center leading-4 px-3 py-1 text-sm rounded-full bg-green-100 text-green-800 font-medium">Start</span>
+                                       <div class="h-8 border-l border-gray-300" aria-hidden="true"></div>
+                                       <div class="relative w-full max-w-sm rounded-lg transition duration-500 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-gray-100">
+                                          <div class="group rounded-lg border border-gray-300 bg-white p-3 shadow-lg transition duration-500 hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600">
+                                             <div class="absolute inset-x-0 top-0 flex -translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="absolute inset-x-0 bottom-0 flex translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="pointer-events-none absolute inset-0 rounded-lg ring-2 ring-inset ring-transparent transition duration-500"></div>
+                                             <div class="flex items-center justify-between space-x-3">
+                                                <div class="flex items-center space-x-3">
+                                                   <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                   </svg>
+                                                   <div>
+                                                      <p class="text-xs font-medium text-gray-500 dark:text-gray-300">Tools</p>
+                                                      <p class="text-sm font-semibold text-gray-700 dark:text-white">Subdomain Finder</p>
+                                                   </div>
+                                                </div>
+                                                <div class="flex space-x-2">
+                                                   <button type="button" disabled="" class="inline-flex items-center rounded border border-transparent bg-gray-600 px-2.5 py-1.5 text-xs font-medium text-white opacity-50 shadow-sm transition duration-500 hover:bg-gray-700 focus:border-primary-accent-500 focus:outline-none focus:ring focus:ring-primary-accent-500 focus:ring-opacity-50 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:opacity-100 dark:hover:bg-gray-700 dark:focus:border-primary-accent-500">
+                                                      <svg class="mr-2 -ml-1 h-4 w-4 flex-shrink-0 text-white dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                      Configure 
+                                                   </button>
+                                                   <button type="button" disabled="" class="rounded border border-transparent p-1.5 text-gray-400 transition duration-500 hover:bg-red-500 hover:text-white focus:outline-none dark:text-gray-300 dark:hover:border-red-600 dark:hover:border-opacity-50 dark:hover:bg-red-600 dark:hover:bg-opacity-10 dark:hover:text-red-400 dark:focus:border-red-500 dark:focus:bg-red-600 dark:focus:bg-opacity-10 dark:focus:text-red-400 dark:focus:ring-red-500 dark:focus:ring-opacity-50 dark:focus:ring-offset-0">
+                                                      <span class="sr-only">Remove tool</span>
+                                                      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="h-8 border-l border-gray-300" aria-hidden="true"></div>
+                                       <div class="relative w-full max-w-sm rounded-lg transition duration-500 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-gray-100">
+                                          <div class="group rounded-lg border border-gray-300 bg-white p-3 shadow-lg transition duration-500 hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600">
+                                             <div class="absolute inset-x-0 top-0 flex -translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="absolute inset-x-0 bottom-0 flex translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="pointer-events-none absolute inset-0 rounded-lg ring-2 ring-inset ring-transparent transition duration-500"></div>
+                                             <div class="flex items-center justify-between space-x-3">
+                                                <div class="flex items-center space-x-3">
+                                                   <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                   </svg>
+                                                   <div>
+                                                      <p class="text-xs font-medium text-gray-500 dark:text-gray-300">Tools</p>
+                                                      <p class="text-sm font-semibold text-gray-700 dark:text-white">TCP Port Scanner</p>
+                                                   </div>
+                                                </div>
+                                                <div class="flex space-x-2">
+                                                   <button type="button" disabled="" class="inline-flex items-center rounded border border-transparent bg-gray-600 px-2.5 py-1.5 text-xs font-medium text-white opacity-50 shadow-sm transition duration-500 hover:bg-gray-700 focus:border-primary-accent-500 focus:outline-none focus:ring focus:ring-primary-accent-500 focus:ring-opacity-50 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:opacity-100 dark:hover:bg-gray-700 dark:focus:border-primary-accent-500">
+                                                      <svg class="mr-2 -ml-1 h-4 w-4 flex-shrink-0 text-white dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                      Configure 
+                                                   </button>
+                                                   <button type="button" disabled="" class="rounded border border-transparent p-1.5 text-gray-400 transition duration-500 hover:bg-red-500 hover:text-white focus:outline-none dark:text-gray-300 dark:hover:border-red-600 dark:hover:border-opacity-50 dark:hover:bg-red-600 dark:hover:bg-opacity-10 dark:hover:text-red-400 dark:focus:border-red-500 dark:focus:bg-red-600 dark:focus:bg-opacity-10 dark:focus:text-red-400 dark:focus:ring-red-500 dark:focus:ring-opacity-50 dark:focus:ring-offset-0">
+                                                      <span class="sr-only">Remove tool</span>
+                                                      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="h-8 border-l border-gray-300" aria-hidden="true"></div>
+                                       <div class="group relative w-full max-w-md rounded-lg border border-gray-300 bg-white shadow-lg transition duration-300 hover:border-gray-400 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600">
+                                          <div class="absolute inset-x-0 top-0 flex -translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                             <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                             </div>
+                                          </div>
+                                          <div class="absolute inset-x-0 bottom-0 flex translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                             <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                             </div>
+                                          </div>
+                                          <div>
+                                             <!---->
+                                             <div class="flex flex-wrap items-center justify-between px-3 sm:flex-nowrap pt-4 pb-3 pt-3 pb-4">
+                                                <div class="order-1 flex flex-shrink-0 items-center space-x-3">
+                                                   <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                                                   </svg>
+                                                   <div>
+                                                      <p class="text-xs font-medium text-gray-500 dark:text-gray-300">Filters</p>
+                                                      <p class="text-sm font-semibold text-gray-700 dark:text-white">Service</p>
+                                                   </div>
+                                                </div>
+                                                <div class="order-3 mt-3 grid w-full grid-cols-2 gap-3 sm:order-2 sm:mt-0 sm:ml-6 sm:w-auto">
+                                                   <select class="block w-full rounded-md border-transparent bg-gray-100 py-1.5 px-2 text-sm focus:border-primary-accent-500 focus:bg-white focus:ring-1 focus:ring-primary-accent-500 dark:bg-gray-900 dark:text-white" aria-label="condition" disabled="">
+                                                      <option value="contains">Contains</option>
+                                                   </select>
+                                                   <input type="text" class="block w-full rounded-md border-transparent bg-gray-100 py-1.5 px-2 text-sm focus:border-primary-accent-500 focus:bg-white focus:ring-1 focus:ring-primary-accent-500 dark:bg-gray-900 dark:text-white" aria-label="criteria" placeholder="Criteria" disabled="">
+                                                </div>
+                                                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                                                   <button type="button" disabled="" class="rounded border border-transparent p-1.5 text-gray-400 transition duration-500 hover:bg-red-500 hover:text-white focus:outline-none dark:text-gray-300 dark:hover:border-red-600 dark:hover:border-opacity-50 dark:hover:bg-red-600 dark:hover:bg-opacity-10 dark:hover:text-red-400 dark:focus:border-red-500 dark:focus:bg-red-600 dark:focus:bg-opacity-10 dark:focus:text-red-400 dark:focus:ring-red-500 dark:focus:ring-opacity-50 dark:focus:ring-offset-0">
+                                                      <span class="sr-only">Remove filter</span>
+                                                      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="h-8 border-l border-gray-300" aria-hidden="true"></div>
+                                       <div class="relative w-full max-w-sm rounded-lg transition duration-500 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-gray-100">
+                                          <div class="group rounded-lg border border-gray-300 bg-white p-3 shadow-lg transition duration-500 hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600">
+                                             <div class="absolute inset-x-0 top-0 flex -translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="absolute inset-x-0 bottom-0 flex translate-y-1/2 transform items-center justify-center transition duration-500" aria-hidden="true">
+                                                <div class="overflow-hidden rounded-full border border-gray-300 bg-white p-0.5 transition duration-500 group-hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800">
+                                                   <div class="h-1.5 w-1.5 rounded-full bg-gray-200 transition duration-500 group-hover:bg-gray-400 dark:bg-gray-600"></div>
+                                                </div>
+                                             </div>
+                                             <div class="pointer-events-none absolute inset-0 rounded-lg ring-2 ring-inset ring-transparent transition duration-500"></div>
+                                             <div class="flex items-center justify-between space-x-3">
+                                                <div class="flex items-center space-x-3">
+                                                   <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                   </svg>
+                                                   <div>
+                                                      <p class="text-xs font-medium text-gray-500 dark:text-gray-300">Tools</p>
+                                                      <p class="text-sm font-semibold text-gray-700 dark:text-white">Website Recon</p>
+                                                   </div>
+                                                </div>
+                                                <div class="flex space-x-2">
+                                                   <button type="button" disabled="" class="inline-flex items-center rounded border border-transparent bg-gray-600 px-2.5 py-1.5 text-xs font-medium text-white opacity-50 shadow-sm transition duration-500 hover:bg-gray-700 focus:border-primary-accent-500 focus:outline-none focus:ring focus:ring-primary-accent-500 focus:ring-opacity-50 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:opacity-100 dark:hover:bg-gray-700 dark:focus:border-primary-accent-500">
+                                                      <svg class="mr-2 -ml-1 h-4 w-4 flex-shrink-0 text-white dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                      Configure 
+                                                   </button>
+                                                   <button type="button" disabled="" class="rounded border border-transparent p-1.5 text-gray-400 transition duration-500 hover:bg-red-500 hover:text-white focus:outline-none dark:text-gray-300 dark:hover:border-red-600 dark:hover:border-opacity-50 dark:hover:bg-red-600 dark:hover:bg-opacity-10 dark:hover:text-red-400 dark:focus:border-red-500 dark:focus:bg-red-600 dark:focus:bg-opacity-10 dark:focus:text-red-400 dark:focus:ring-red-500 dark:focus:ring-opacity-50 dark:focus:ring-offset-0">
+                                                      <span class="sr-only">Remove tool</span>
+                                                      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="h-8 border-l border-gray-300" aria-hidden="true"></div>
+                                       <span data-testid="badge" class="inline-flex items-center leading-4 px-3 py-1 text-sm rounded-full bg-red-100 text-red-800 font-medium">Stop</span>
+                                    </div>
+                                 </div>
+                                 <p> For instance, this <strong>Recon Robot</strong> discovers all subdomains of a target domain and does full port scanning and service discovery. For each web port, it does recon to gather technologies and take screenshots and delivers all the data aggregated in the unified <a href="https://pentest-tools.com/features/attack-surface" class="">Attack Surface view</a>. </p>
+                                 <p> With your TCP port scan report, you can start digging deeper and pursue the most interesting findings in it while also getting inspiration for the next stages in your engagement, particularly around security issues related to business logic. </p>
+                                 <br class="clear-both">
+                              </div>
+                           </div>
+                        </div>
+                        <!----><!---->
+                     </article>
+                     <div class="mx-auto my-24 max-w-3xl px-4 sm:px-6">
+                        <h2 class="mb-10 px-5 text-center text-xl lg:px-0 xl:text-3xl"><q>As a professional Pentester, I definitely recommend this</q></h2>
+                        <blockquote data-v-a33a6bec="" class="border-t border-light-blue-200 pt-10 testimonial-inline relative">
+                           <div data-v-a33a6bec="" class="absolute inset-x-0 top-0 flex justify-center" aria-hidden="true">
+                              <span data-v-a33a6bec="" class="quote-background -translate-y-1/2 transform px-2">
+                                 <svg data-v-a33a6bec="" class="text-primary-accent-500 h-8 w-auto" aria-hidden="true" viewBox="0 0 52 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m51.72 9.541-.065-.422-.068.015a11.21 11.21 0 0 0-3.06-5.536 11.761 11.761 0 0 0-5.635-3.1 12.014 12.014 0 0 0-6.472.294 11.673 11.673 0 0 0-5.311 3.596 11.135 11.135 0 0 0-2.514 5.79c-.258 2.12.11 4.27 1.059 6.197a11.434 11.434 0 0 0 4.306 4.694 11.935 11.935 0 0 0 6.224 1.742c.578 0 1.133-.085 1.685-.163-.179.583-.363 1.176-.659 1.709-.295.774-.757 1.445-1.215 2.121-.384.732-1.06 1.227-1.558 1.853-.521.608-1.232 1.013-1.794 1.518-.552.528-1.276.792-1.851 1.164-.601.334-1.125.704-1.685.88l-1.397.558-1.229.495 1.255 4.874 1.547-.362c.495-.12 1.1-.262 1.786-.43.703-.126 1.452-.47 2.287-.784.822-.36 1.778-.599 2.665-1.174.891-.548 1.92-1.006 2.828-1.74.879-.756 1.939-1.412 2.722-2.372.855-.9 1.7-1.845 2.356-2.921.76-1.026 1.275-2.152 1.82-3.265.492-1.114.889-2.253 1.213-3.359.614-2.217.89-4.323.995-6.125.089-1.805.037-3.306-.072-4.392-.037-.453-.091-.905-.164-1.355Zm-28.515 0-.065-.422-.068.015a11.21 11.21 0 0 0-3.06-5.536 11.761 11.761 0 0 0-5.635-3.1 12.013 12.013 0 0 0-6.471.294 11.673 11.673 0 0 0-5.312 3.596 11.135 11.135 0 0 0-2.514 5.79c-.257 2.12.11 4.27 1.06 6.197a11.435 11.435 0 0 0 4.305 4.694 11.935 11.935 0 0 0 6.224 1.742c.578 0 1.133-.085 1.685-.163-.179.583-.363 1.176-.658 1.709-.296.774-.757 1.445-1.216 2.121-.384.732-1.06 1.227-1.558 1.853-.521.608-1.231 1.013-1.794 1.518-.552.528-1.275.792-1.85 1.164-.602.334-1.126.704-1.686.88l-1.397.558c-.78.309-1.226.49-1.226.49l1.255 4.874 1.547-.362c.495-.12 1.1-.262 1.786-.43.703-.126 1.452-.47 2.287-.784.821-.36 1.778-.598 2.664-1.174.892-.548 1.921-1.006 2.829-1.74.878-.756 1.939-1.412 2.721-2.372.856-.9 1.7-1.845 2.357-2.921.76-1.026 1.275-2.152 1.82-3.265a27.28 27.28 0 0 0 1.213-3.359c.614-2.217.889-4.323.995-6.125.088-1.805.036-3.306-.073-4.392a18.456 18.456 0 0 0-.165-1.35Z" fill="currentColor"></path>
+                                 </svg>
+                              </span>
+                           </div>
+                           <div data-v-a33a6bec="" class="italic">
+                              <p data-v-a33a6bec="" class="text-lg text-dark-blue-400 max-w-3xl"><q>The way it handles the Fingerprinting, Reconnaissance and reporting, also since it is web based, it saves local resource and helps you to work further on the same target without wasting time.</q></p>
+                           </div>
+                           
+                        </blockquote>
+                     </div>
+                     
+                    
+                     
+                  </div>
+                  <!--]--><!--]-->
+               </main>
+               <div class="relative bg-gray-900">
+                  <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                  <!---->
+                  
+               </div>
+               <button style="display: none;" type="button" title="Scroll to top" aria-hidden="true" tabindex="-1" class="fixed bottom-5 right-5 z-120 flex h-10 w-10 items-center justify-center rounded-full border border-light-blue-50 bg-white text-dark-blue-600 shadow-md hs:bottom-24 sm:h-11 sm:w-11">
+                  <span class="sr-only">Scroll to top</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-4 w-4 sm:h-5 sm:w-5">
+                     <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+               </button>
+            </div>
+            <!--]-->
+         </div>
+      </div>
+   </body>
+</html>
+{% endblock body %}

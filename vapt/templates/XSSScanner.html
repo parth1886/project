@@ -1,0 +1,444 @@
+{% extends 'base.html' %}
+{% block title %}
+XSSScanner
+{% endblock title %}
+
+
+{% block body %}
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static %}
+   <head>
+    {% block header %}
+ 
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="index,follow,noodp">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:type" content="website">
+      <meta property="fb:app_id" content="264315854616682">
+      <meta property="fb:page_id" content="264315854616682">
+      <meta name="google-site-verification" content="ZN4XXxE19ahONIGM12FD1rX3tMFOYSOdtNh4DG_JtjQ">
+      <meta name="ahrefs-site-verification" content="5b22a25317136dc0e2eee9986720f20eaa83ef1e2b67ffc7f966a6da2408e541">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="twitter:title" content="XSS Scanner - Online Scan for Cross-site Scripting Vulnerabilities">
+      <meta name="description" content="XSS Scanner Online. Test for Cross-Site Scripting vulnerabilities. This XSS testing tool finds websites vulnerable to XSS attacks.">
+      <meta property="og:description" content="XSS Scanner Online. Test for Cross-Site Scripting vulnerabilities. This XSS testing tool finds websites vulnerable to XSS attacks.">
+      <meta name="twitter:description" content="XSS Scanner Online. Test for Cross-Site Scripting vulnerabilities. This XSS testing tool finds websites vulnerable to XSS attacks.">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/entry.21067bea.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/Accordion.fbd02594.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/BaseButton.db5d78e6.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/ContentBlockBody.446ec86d.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/ContentBlock.63d5af38.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/ContentBlockTitle.9ac95d7c.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/Robot.8e997a5b.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/TestimonialTabs.04fd7a9f.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/BaseInput.3e8a6278.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/TestimonialInline.4c2b5dcb.css' %}">
+      <link rel="preload" as="style" href="{% static './assets/css/XSS Scanner_files/Review.6b89c827.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/entry.21067bea.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/Accordion.fbd02594.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/BaseButton.db5d78e6.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/ContentBlockBody.446ec86d.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/ContentBlock.63d5af38.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/ContentBlockTitle.9ac95d7c.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/Robot.8e997a5b.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/TestimonialTabs.04fd7a9f.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/BaseInput.3e8a6278.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/TestimonialInline.4c2b5dcb.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/Review.6b89c827.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/TheHeader.e3ce70fa.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/Alert.1eedfcaf.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/TestimonialCentered.47393e98.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/FaqItem.729d7574.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/BaseSection.8443c845.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/web-application-penetration-testing.261b2f10.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/ToolPageTechnicalDetails.90804bec.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/BaseTable.a3a3f0b2.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/DocsCodeBlock.59e04287.css' %}">
+      <link rel="stylesheet" href="{% static './assets/css/XSS Scanner_files/free.e337e9dc.css' %}">
+      {% endblock %}
+
+   </head>
+   <body>
+      <div id="__nuxt">
+         <div>
+               <main id="main" class="bg-gray-900">
+                  <!--[--><!--[-->
+                  <div>
+                     <div class="relative">
+                        <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-gray"></div>
+                        <div data-v-9a44d66f="" class="relative overflow-hidden" data-nosnippet="true">
+                           <!---->
+                           <div data-v-9a44d66f="" class="relative my-5 sm:my-12 md:my-16 lg:my-20 xl:mt-24 xl:mb-32">
+                              <div data-v-9a44d66f="" class="mx-auto max-w-screen-xl">
+                                 <div data-v-9a44d66f="" class="flex space-y-5 px-5 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:space-y-0 xl:px-10 flex-col-reverse space-y-reverse">
+                                    <div data-v-9a44d66f="" class="relative sm:text-center lg:text-left xl:col-span-6 xl:ml-0 lg:col-span-7">
+                                       <div data-v-9a44d66f="" class="absolute inset-x-0 bottom-0 flex justify-center lg:inset-auto lg:inset-y-0 lg:right-0 lg:items-center lg:justify-start" aria-hidden="true">
+                                          <svg data-v-9a44d66f="" class="hidden h-5 w-5 translate-y-full transform text-[#313438] supports-backdrop-filter:text-light-blue-200 supports-backdrop-filter:text-opacity-10 lg:block lg:translate-y-0 lg:translate-x-full lg:-rotate-90" viewBox="0 0 100 100" fill="currentColor">
+                                             <polygon data-v-9a44d66f="" points="0 0, 100 0, 50 75"></polygon>
+                                          </svg>
+                                       </div>
+                                       <div data-v-9a44d66f="" class="tool-block relative overflow-hidden rounded-lg p-5 supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl xl:p-10">
+                                          <div data-v-9a44d66f="" class="flex flex-wrap gap-2">
+                                             <a data-v-9a44d66f="" href="" class="underline font-semibold uppercase tracking-wide text-primary-accent-500 hover:text-white">Web Application Testing</a>
+                                          </div>
+                                          <h1 data-v-9a44d66f="" class="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl xl:text-6xl">XSS Scanner</h1>
+                                          <div data-v-9a44d66f="" class="tool-description mt-5 space-y-4 text-light-blue-100 text-opacity-60 sm:mt-5 sm:text-xl lg:max-w-2xl lg:text-lg xl:text-xl">
+                                             <p> Test if a web application is vulnerable to Cross-Site Scripting. This tool had previously used <strong>OWASP ZAP</strong>, but now it uses our own proprietary scanning engine. </p>
+                                          </div>
+                                          <div data-v-9a44d66f="" class="mt-5 flex flex-col divide-y divide-light-blue-100 divide-opacity-10 sm:flex-row sm:justify-center sm:space-y-0 sm:divide-y-0 sm:divide-x lg:flex-col lg:justify-evenly lg:space-y-3 lg:divide-x-0 lg:divide-y xl:flex-row xl:justify-start xl:space-y-0 xl:divide-y-0 xl:divide-x">
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Sample report 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Use cases 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                                      <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Technical details 
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div data-v-9a44d66f="" class="relative xl:col-span-6 lg:col-span-5">
+                                       <div data-v-9a44d66f="" id="toolHeader" class="tool-block relative overflow-hidden rounded-lg supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                          <!---->
+                                          <div data-v-9a44d66f="" class="NewWebsiteToolForm overflow-hidden rounded-lg bg-white shadow-2xl md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                             <div class="flex flex-col justify-between overflow-hidden rounded-lg shadow-2xl shadow-dark-blue-500/10" id="toolForm">
+                                                <div class="flex-1">
+                                                   <dl>
+                                                      <dt class="sr-only">Scan type</dt>
+                                                      <dd>
+                                                         <ul class="relative grid grid-cols-2 self-center rounded-t-lg bg-light-blue-200 bg-opacity-50">
+                                                            
+                                                            <li><button type="button" aria-haspopup="true" aria-expanded="false" class="w-full rounded-none px-4 py-4 text-center font-semibold text-dark-blue-500 focus:z-10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-dark-blue-400 sm:px-8"> Full scan </button></li>
+                                                         </ul>
+                                                      </dd>
+                                                   </dl>
+                                                   <div aria-live="assertive" class="relative space-y-6 overflow-hidden bg-light-blue-50 px-5 py-6 xl:p-10">
+                                                      <div class="space-y-6" data-testid="tool-form">
+                                                         <form class="space-y-4" aria-label="Scan with tool">
+                                                            <div data-v-2feb1a0a="" class="space-y-2">
+                                                               <div data-v-2feb1a0a="" class="space-y-1">
+                                                                  <div data-v-2feb1a0a="" class="flex items-center justify-between">
+                                                                     <label data-v-2feb1a0a="" for="ptt-input-4" class="cursor-pointer text-xs font-semibold text-dark-blue-400">Target</label><!---->
+                                                                  </div>
+                                                                  <div data-v-2feb1a0a="" class="relative rounded-md shadow-sm">
+                                                                     <div data-v-2feb1a0a="" class="absolute inset-y-0 left-0 flex items-center">
+                                                                        <label class="h-full">
+                                                                           <span class="sr-only">Protocol</span>
+                                                                           <select id="protocol" name="protocol" class="z-0 h-full border-0 bg-transparent py-0 pl-3 pr-8 font-bold text-dark-blue-500 sm:text-xs">
+                                                                              <option value="https://">HTTPS</option>
+                                                                              <option value="http://">HTTP</option>
+                                                                           </select>
+                                                                        </label>
+                                                                     </div>
+                                                                     <input data-v-2feb1a0a="" type="text" modelmodifiers="[object Object]" name="target" inputmode="url" autocorrect="off" spellcheck="false" placeholder="www.example.com" id="ptt-input-4" class="sm:text-sm pl-24"><!----><!---->
+                                                                  </div>
+                                                               </div>
+                                                               <!---->
+                                                            </div>
+                                                            <div class="space-y-4 xl:space-y-0 xl:grid xl:grid-cols-2 xl:items-center xl:gap-3">
+                                                               
+                                                               <div>
+                                                                  <button type="submit" class="flex w-full items-center justify-center rounded-md bg-secondary-accent-500 px-4 py-2.5 font-semibold text-dark-blue-500 shadow-sm transition hover:bg-secondary-accent-400 focus:bg-secondary-accent-400 focus:outline-none focus:ring focus:ring-secondary-accent-500 disabled:pointer-events-none disabled:opacity-75">
+                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 -ml-1 flex-shrink-0">
+                                                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                                                                     </svg>
+                                                                     Scan target
+                                                                  </button>
+                                                               </div>
+                                                            </div>
+                                                         </form>
+                                                         <!----><!----><!---->
+                                                      </div>
+                                                      <!---->
+                                                   </div>
+                                                   <!----><!----><!----><!---->
+                                                </div>
+                                                <!---->
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pointer-events-none relative translate-y-px transform" aria-hidden="true">
+                           <svg class="text-light-blue-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2080 251">
+                              <path fill="currentColor" d="M1040.72.182L0 251h2080L1040.72.182z"></path>
+                           </svg>
+                           <svg class="absolute inset-0 top-[-5%]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1280 259">
+                              <path stroke="url(#a)" stroke-width="15" d="M640.717 8-400 258.818h2080L640.717 8Z"></path>
+                              <defs>
+                                 <radialgradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(0 -109.5 908.067 0 640 -4.5)" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="salmon"></stop>
+                                    <stop offset="1" stop-color="salmon" stop-opacity="0"></stop>
+                                 </radialgradient>
+                              </defs>
+                           </svg>
+                        </div>
+                     </div>
+                     <div id="sample-report" class="overflow-hidden bg-light-blue-50 py-16 lg:py-24" data-nosnippet="true" img-dark-src="/images/reports/xss-scanner/xss-scanner-report-mockup-mobile-dark.webp">
+                        <div class="mx-auto max-w-xl px-5 lg:max-w-screen-xl xl:px-20">
+                           <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+                              <div class="relative">
+                                 <p class="section-highlight">Reporting</p>
+                                 <h2 class="mt-5 text-3xl font-extrabold leading-8 tracking-tight text-dark-blue-700 sm:text-4xl">Sample XSS Scanner report</h2>
+                                 <p class="mx-auto mt-5 max-w-3xl text-xl text-dark-blue-400"> Here is a sample report from our XSS Scanner that gives you a taste of how our tools save you time and reduce repetitive manual work. </p>
+                                 <ul class="mt-10 space-y-5">
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Quick summary of the findings and their risk ratings for fast prioritization</p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Detailed risk breakdown with ready-to-use recommendations</p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Visual representations of risk ratings for the discovered vulnerabilities</p>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <div class="mt-10 flex justify-center lg:justify-start">
+                                    <a data-v-1c9188de="" href="" data-variant="primary" class="inline-flex cursor-pointer touch-none select-none items-center justify-center whitespace-nowrap border text-center font-semibold tracking-tight transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-75 btn-lg btn-primary" download="Pentest-Tools.com XSS Vulnerability Scanner Sample Report.pdf">
+                                       <!---->
+                                       <span data-v-1c9188de="" aria-hidden="true" data-testid="icon" class="order-3 flex-shrink-0 mr-2 -ml-1">
+                                          <svg data-v-1c9188de="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="text-dark-blue-500">
+                                             <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </span>
+                                       <span data-v-1c9188de="" class="order-3">Download sample report</span>
+                                    </a>
+                                 </div>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                     <section data-v-aab4f65d="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative bg-gradient-to-b from-white to-light-blue-50" data-nosnippet="true" id="use-cases">
+                        <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                           <div data-v-aab4f65d="" class="relative lg:text-center">
+                              <!----><!----><!---->
+                              <p data-v-aab4f65d="" class="section-highlight mb-2">How to use the pentesting tool</p>
+                              <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">Use Cases for XSS Scanner</h2>
+                              <p data-v-aab4f65d="" data-section-description="" class="text-dark-blue-400 mt-4 max-w-3xl text-xl mx-auto"> Powered by the <strong>Pentest-Tools.com proprietary scan engine</strong> (previously powered by <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" target="_blank" rel="noopener nofollow">OWASP ZAP</a>), this scanner helps you test if the target web application is affected by <a href="https://pentest-tools.com/blog/xss-attacks-practical-scenarios" target="_blank">Cross-Site Scripting vulnerabilities</a>. </p>
+                              <!----><!---->
+                           </div>
+                           <div data-v-aab4f65d="" class="mt-10">
+                              <ul class="relative grid gap-8 px-6 lg:grid-cols-3 lg:px-0">
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Website Penetration Testing</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Speed up your pentest with this online scanner. It’s already set up and configured with optimal settings for best results and performance. Just start the scan and get a notification when results are ready. </p>
+                                    </div>
+                                 </li>
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Security Self-Assessment</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Evaluate your own application’s security to detect weaknesses. Get clear, easy-to-follow recommendations to fix web vulnerabilities before real attackers exploit them. </p>
+                                    </div>
+                                 </li>
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Third-Party Website Audit</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> If you are a web development company, you can use this report to prove to your clients that you have implemented proper security measures in their web application. </p>
+                                    </div>
+                                 </li>
+                              </ul>
+                              
+                           </div>
+                        </div>
+                        <!----><!---->
+                     </section>
+                     <article data-v-aab4f65d="" data-v-b0bdac2c="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden bg-light-blue-50" data-nosnippet="true" id="technical-details">
+                        <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                           <div data-v-aab4f65d="" class="relative text-center">
+                              <!----><!----><!---->
+                              <p data-v-aab4f65d="" class="section-highlight mb-2">XSS Scanner</p>
+                              <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">Technical details</h2>
+                              <!----><!----><!---->
+                           </div>
+                           <div data-v-aab4f65d="" class="mt-10">
+                              <div data-v-b0bdac2c="" class="prose prose-brand mx-auto max-w-3xl">
+                                 <h3>About</h3>
+                                 <p> Cross-Site Scripting (XSS) is one of the most well-known web application vulnerabilities. It even has a dedicated chapter in the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external nofollow noopener noreferrer" target="_blank">OWASP Top 10</a> project and it is a highly chased after vulnerability in <a href="https://www.google.com/search?q=site%3Ahackerone.com+xss" rel="external nofollow noopener noreferrer" target="_blank">bug bounty programs</a>. </p>
+                                 <p> The risk of a Cross-Site Scripting vulnerability can range from cookie stealing, temporary website defacement, injecting malicious scripts, or reading sensitive page content of a victim user. </p>
+                                 <p>The scanner works in two steps:</p>
+                                 <ol>
+                                    <li><strong>Spider the target</strong>: In this first step, the tool tries to identify all the pages in the web application, including injectable parameters in forms, URLs, headers, etc. </li>
+                                    <li><strong>Test for XSS</strong>: For each page discovered in the previous step, the scanner will try to detect if the parameters are vulnerable to Cross-Site Scripting and report them on the results page. </li>
+                                 </ol>
+                                 <p>The table below shows the differences between the Light scan and the Full scan:</p>
+                                 <div data-v-db29e885="" class="flex flex-col not-prose">
+                                    <div data-v-db29e885="" class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                       <div data-v-db29e885="" class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                                          <div data-v-db29e885="" class="shadow border-gray-200 border sm:rounded-lg overflow-hidden">
+                                             <table data-v-db29e885="" class="min-w-full divide-y divide-gray-200">
+                                                <!---->
+                                                <thead data-v-db29e885="">
+                                                   <tr data-v-db29e885="">
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Scanner capabilities</span>
+                                                         </div>
+                                                      </th>
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Light scan</span>
+                                                         </div>
+                                                      </th>
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Full scan</span>
+                                                         </div>
+                                                      </th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody data-v-db29e885="" class="divide-y divide-gray-200 bg-white">
+                                                   <tr>
+                                                      <td>Spider max URLs</td>
+                                                      <td>20</td>
+                                                      <td>500</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Spider max duration</td>
+                                                      <td>1 minute</td>
+                                                      <td>15 minutes</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Active scan max duration</td>
+                                                      <td>2 minutes</td>
+                                                      <td>30 minutes</td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 
+                                 <h3>Parameters</h3>
+                                 <div data-v-db29e885="" class="flex flex-col not-prose">
+                                    <div data-v-db29e885="" class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                       <div data-v-db29e885="" class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                                          <div data-v-db29e885="" class="shadow border-gray-200 border sm:rounded-lg overflow-hidden">
+                                             <table data-v-db29e885="" class="min-w-full divide-y divide-gray-200">
+                                                <!---->
+                                                <thead data-v-db29e885="">
+                                                   <tr data-v-db29e885="">
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Parameter</span>
+                                                         </div>
+                                                      </th>
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Description</span>
+                                                         </div>
+                                                      </th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody data-v-db29e885="" class="divide-y divide-gray-200 bg-white">
+                                                   <tr>
+                                                      <td><strong>Target URL</strong></td>
+                                                      <td>This is the URL of the website that will be scanned. All URLs must start with http or https.</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td><strong>Light Scan</strong></td>
+                                                      <td>This scan is faster but less comprehensive than the full scan.</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td><strong>Full Scan</strong></td>
+                                                      <td>This is a complete Cross-Site Scripting assessment of the target web application.</td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <h3>How it works</h3>
+                                 <p> The XSS Scanner had been using the <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" target="_blank" rel="external nofollow noopener noreferrer">OWASP ZAP</a> scanning engine (which is one of the world’s most popular open-source security tools, actively maintained by hundreds of international developers). However, we improved upon it, and we're now using a proprietary internal scanning engine for the XSS Scanner, to your benefit. </p>
+                                 <p> The tool detects XSS vulnerabilities with a range of requests. First, the scanner injects a simple string in the tested parameter and checks if it is reflected on the response page. If the parameter is reflected, then the scanner will inject a piece of JavaScript code, including some special HTML characters (<code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">&gt;</code>, <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">&lt;</code>, <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">"</code>, <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">'</code>) and it will try to see if they are returned in the response page without sanitization. If this is true, the page and parameter are declared vulnerable. </p>
+                                 <p> Get more information about Cross-Site Scripting and how to remediate this vulnerability on the dedicated <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" rel="external nofollow noopener noreferrer" target="_blank">OWASP XSS Page</a>. </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!----><!---->
+                     </article>
+                  </div>
+                  <!--]--><!--]-->
+               </main>
+               <div class="relative bg-gray-900">
+                  <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                  <!---->
+                  
+               </div>
+               <button style="display: none;" type="button" title="Scroll to top" aria-hidden="true" tabindex="-1" class="fixed bottom-5 right-5 z-120 flex h-10 w-10 items-center justify-center rounded-full border border-light-blue-50 bg-white text-dark-blue-600 shadow-md hs:bottom-24 sm:h-11 sm:w-11">
+                  <span class="sr-only">Scroll to top</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-4 w-4 sm:h-5 sm:w-5">
+                     <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+               </button>
+            </div>
+            <!--]-->
+         </div>
+      </div>
+   </body>
+</html>
+{% endblock body %}

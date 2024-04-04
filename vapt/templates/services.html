@@ -1,0 +1,84 @@
+  {% extends 'base.html' %}
+{% block title %}
+Services
+{% endblock title %}
+
+
+{% block body %}
+{% load static %}
+
+<!-- ======= Our Services Section ======= -->
+<section id="services" class="services sections-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Choose independent penetration testing services to get expert advice and guidance from our offensive security pros and reduce your exposure to cyberattacks</p>
+      </div>
+
+      <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item  position-relative">
+            <div class="icon">
+              <i class="bi bi-activity"></i>
+            </div>
+            <h3>Domain finder</h3>
+            <p>Allows you to discover domains associated with a target domain and to determine the attack surface of a target organization. Find systems which are less protected and more vulnerable to attacks.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-broadcast"></i>
+            </div>
+            <h3>Subdomain finder</h3>
+            <p>Find the subdomains of an internet domain and determine the attack surface of an organization.This subdomain scanner combines multiple discovery methods and returns only valid results to help you perform extensive reconnaissance.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-easel"></i>
+            </div>
+            <h3>TCP port scan</h3>
+            <p>Find open ports and running services (incl. versions), and do OS fingerprinting in a single TCP port check. Inspect Top 100 TCP ports for free or get a paid plan to automate and schedule extensive custom scans for even more ports.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-bounding-box-circles"></i>
+            </div>
+            <h3>UDP port scan</h3>
+            <p>Allows you to discover which UDP ports are open on your target host, identify the service versions, and detect the operating system.</p>     
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-calendar4-week"></i>
+            </div>
+            <h3>XSS style  </h3>
+            <p>Here is a sample report from our XSS Scanner that gives you a taste of how our tools save you time and reduce repetitive manual work.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-chat-square-text"></i>
+            </div>
+            <h3>SSL/TLS Scanner</h3>
+            <p>The SSL Scanner connects to the target port and tries to negotiate various cipher suites and multiple SSL/TLS versions to discover weak configurations and common vulnerabilities (e.g., POODLE, Heartbleed, DROWN, ROBOT, etc.). The full version of the SSL Scanner scans multiple ports and services (HTTPS, SMTPs, IMAPs, etc.)</p>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+  </section><!-- End Our Services Section -->
+{% endblock body %}

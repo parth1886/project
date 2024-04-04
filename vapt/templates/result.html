@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Result:</h2>
+
+{% if subdirectories %}
+  <ul>
+  {% for subdirectory in subdirectories %}
+    <li><a href="{{ subdirectory }}">{{ subdirectory }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  No subdirectories found.
+{% endif %}
+
+{% endblock body %}

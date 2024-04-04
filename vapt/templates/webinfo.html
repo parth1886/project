@@ -1,0 +1,373 @@
+{% extends 'base.html' %}
+{% block title %}
+Subdirectories Finder
+{% endblock title %}
+
+
+{% block body %}
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static %}
+   
+
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="index,follow,noodp">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:type" content="website">
+      
+      <meta property="fb:app_id" content="264315854616682">
+      <meta property="fb:page_id" content="264315854616682">
+      <meta name="google-site-verification" content="ZN4XXxE19ahONIGM12FD1rX3tMFOYSOdtNh4DG_JtjQ">
+      <meta name="ahrefs-site-verification" content="5b22a25317136dc0e2eee9986720f20eaa83ef1e2b67ffc7f966a6da2408e541">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta property="og:title" content="Google Hacking - Free Google Dorks for Recon">
+      <meta name="twitter:title" content="Google Hacking - Free Google Dorks for Recon">
+      <meta name="description" content="Free Google dorks for pentesters, recon, OSINT. Find exposed docs, DBs, configs &amp; log files, login pages, directory listing vulns, SQL errors, pastebins &amp; more!">
+      <meta property="og:description" content="Free Google dorks for pentesters, recon, OSINT. Find exposed docs, DBs, configs &amp; log files, login pages, directory listing vulns, SQL errors, pastebins &amp; more!">
+      <meta name="twitter:description" content="Free Google dorks for pentesters, recon, OSINT. Find exposed docs, DBs, configs &amp; log files, login pages, directory listing vulns, SQL errors, pastebins &amp; more!">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+     
+      {% block header %}
+      <link rel="stylesheet" href="{% static './assets/css/entry.21067bea.css' %}">
+	   <link rel="stylesheet" href="{% static './assets/css/ToolPageTechnicalDetails.90804bec.css' %}">
+     {% endblock %}
+	  
+      	  </head>
+   <body>
+      <div id="__nuxt">
+         <div>
+            <!--[-->
+            <div class="bg-gray-900 font-sans antialiased">
+               <div class="sr-only focus-within:not-sr-only focus-within:absolute focus-within:top-4 focus-within:left-4 focus-within:z-130"><a href="" class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-light-blue-500 focus:ring-offset-2"> Skip to main content </a></div>
+               <div aria-live="polite">
+                  <!---->
+               </div>
+               
+               <main id="main" class="bg-gray-900">
+                  <!--[--><!--[-->
+                  <div>
+                     <div class="relative">
+                        <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-gray"></div>
+                        <div data-v-9a44d66f="" class="relative overflow-hidden" data-nosnippet="true">
+                           <!---->
+                           <div data-v-9a44d66f="" class="relative my-5 sm:my-12 md:my-16 lg:my-20 xl:mt-24 xl:mb-32">
+                              <div data-v-9a44d66f="" class="mx-auto max-w-screen-xl">
+                                 <div data-v-9a44d66f="" class="flex space-y-5 px-5 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:space-y-0 xl:px-10 flex-col-reverse space-y-reverse">
+                                    <div data-v-9a44d66f="" class="relative sm:text-center lg:text-left xl:col-span-6 xl:ml-0 lg:col-span-7">
+                                       <div data-v-9a44d66f="" class="absolute inset-x-0 bottom-0 flex justify-center lg:inset-auto lg:inset-y-0 lg:right-0 lg:items-center lg:justify-start" aria-hidden="true">
+                                          <svg data-v-9a44d66f="" class="hidden h-5 w-5 translate-y-full transform text-[#313438] supports-backdrop-filter:text-light-blue-200 supports-backdrop-filter:text-opacity-10 lg:block lg:translate-y-0 lg:translate-x-full lg:-rotate-90" viewBox="0 0 100 100" fill="currentColor">
+                                             <polygon data-v-9a44d66f="" points="0 0, 100 0, 50 75"></polygon>
+                                          </svg>
+                                       </div>
+                                       <div data-v-9a44d66f="" class="tool-block relative overflow-hidden rounded-lg p-5 supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl xl:p-10">
+                                          <div data-v-9a44d66f="" class="flex flex-wrap gap-2">
+                                           <center>  <a data-v-9a44d66f="" href="" class="underline font-semibold uppercase tracking-wide text-primary-accent-500 hover:text-white">Information Gathering</a>  </center>
+                                          
+                                          </div> 
+                                          <h1 data-v-9a44d66f="" class="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl xl:text-6xl">SubDirectories Finder</h1>
+                                          <p data-v-9a44d66f="" class="tool-description mt-5 space-y-4 text-light-blue-100 text-opacity-60 sm:mt-5 sm:text-xl lg:max-w-2xl lg:text-lg xl:text-xl">Use advanced search operators (Google Dorks) to find juicy information about target websites.</p>
+                                          <div data-v-9a44d66f="" class="mt-5 flex flex-col divide-y divide-light-blue-100 divide-opacity-10 sm:flex-row sm:justify-center sm:space-y-0 sm:divide-y-0 sm:divide-x lg:flex-col lg:justify-evenly lg:space-y-3 lg:divide-x-0 lg:divide-y xl:flex-row xl:justify-start xl:space-y-0 xl:divide-y-0 xl:divide-x">
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Sample report 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Use cases 
+                                                </a>
+                                             </div>
+                                             <div data-v-9a44d66f="" class="sm:px-2 md:px-3 lg:flex-grow lg:px-0 xl:px-1.5">
+                                                <a data-v-9a44d66f="" href="" class="flex items-center px-2.5 py-3 text-secondary-accent-500 hover:underline focus:outline-none focus:ring-2 focus:ring-secondary-accent-500 lg:justify-center lg:px-0">
+                                                   <svg data-v-9a44d66f="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                                      <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                                                   </svg>
+                                                   Technical details 
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div data-v-9a44d66f="" class="relative xl:col-span-6 lg:col-span-5">
+                                       <div data-v-9a44d66f="" id="toolHeader" class="tool-block relative overflow-hidden rounded-lg supports-backdrop-filter:backdrop-blur-md supports-backdrop-filter:backdrop-filter md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                          <!---->
+                                          <div data-v-9a44d66f="" class="NewWebsiteToolForm overflow-hidden rounded-lg bg-white shadow-2xl md:mx-auto md:w-full md:max-w-2xl lg:max-w-3xl">
+                                             <form class="space-y-3 px-4 py-8 sm:px-10" method="post">
+                                                {% csrf_token %}
+                                                {{ form.as_p }}
+                                                <!--<div data-v-2feb1a0a="" class="space-y-2">
+                                                   <div data-v-2feb1a0a="" class="space-y-1">
+                                                      <div data-v-2feb1a0a="" class="flex items-center justify-between">
+                                                         <label data-v-2feb1a0a="" for="ptt-input-1" class="cursor-pointer text-xs font-semibold text-dark-blue-400">Target</label>
+                                                      </div>
+                                                      <div data-v-2feb1a0a="" class="relative rounded-md shadow-sm">
+                                                         <input data-v-2feb1a0a="" type="text" modelmodifiers="[object Object]" name="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="www.example.com" id="url" class="sm:text-sm">
+                                                      </div>
+                                                   </div>
+                                                   
+                                                </div> -->
+                                                
+                                                <div>
+                                                   <button type="submit" value="submit" class="mt-4 flex w-full items-center justify-center rounded-md bg-secondary-accent-500 px-4 py-2.5 font-semibold text-dark-blue-500 shadow-sm transition hover:bg-secondary-accent-400 focus:bg-secondary-accent-400 focus:outline-none focus:ring focus:ring-secondary-accent-500">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-2 flex-shrink-0">
+                                                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                                                      </svg>
+                                                      Search directorys 
+                                                   </button>
+                                                </div>
+                                             </form>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pointer-events-none relative translate-y-px transform" aria-hidden="true">
+                           <svg class="text-light-blue-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2080 251">
+                              <path fill="currentColor" d="M1040.72.182L0 251h2080L1040.72.182z"></path>
+                           </svg>
+                           <svg class="absolute inset-0 top-[-5%]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1280 259">
+                              <path stroke="url(#a)" stroke-width="15" d="M640.717 8-400 258.818h2080L640.717 8Z"></path>
+                              <defs>
+                                 <radialgradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(0 -109.5 908.067 0 640 -4.5)" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="salmon"></stop>
+                                    <stop offset="1" stop-color="salmon" stop-opacity="0"></stop>
+                                 </radialgradient>
+                              </defs>
+                           </svg>
+                        </div>
+                     </div>
+                     <div id="sample-report" class="overflow-hidden bg-light-blue-50 py-16 lg:py-24" data-nosnippet="true">
+                        <div class="mx-auto max-w-xl px-5 lg:max-w-screen-xl xl:px-20">
+                           <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+                              <div class="relative">
+                                 <p class="section-highlight">Reporting</p>
+                                 <h2 class="mt-5 text-3xl font-extrabold leading-8 tracking-tight text-dark-blue-700 sm:text-4xl">Sample Google Hacking report</h2>
+                                 <p class="mx-auto mt-5 max-w-3xl text-xl text-dark-blue-400"> Here is a sample report from our Google Hacking that gives you a taste of how our tools save you time and reduce repetitive manual work. </p>
+                                 <ul class="mt-10 space-y-5">
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">100% free &amp; unlimited Google Dorks generator</p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Run queries fast and easy</p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Fully passive scan, non-intrusive</p>
+                                       </div>
+                                    </li>
+                                    <li data-v-2d2b538d="" class="flex space-x-2">
+                                       <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-green-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </div>
+                                       <div data-v-2d2b538d="" data-content-block="" class="">
+                                          <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400">Leverage the power of Google search engine as a recond method to uncover interesting findings</p>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <div class="mt-10 flex justify-center lg:justify-start">
+                                    <a data-v-1c9188de="" href="" data-variant="primary" class="inline-flex cursor-pointer touch-none select-none items-center justify-center whitespace-nowrap border text-center font-semibold tracking-tight transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-75 btn-lg btn-primary" download="Pentest-Tools.com Google Hacking Scanner Sample Report.jpg">
+                                       <!---->
+                                       <span data-v-1c9188de="" aria-hidden="true" data-testid="icon" class="order-3 flex-shrink-0 mr-2 -ml-1">
+                                          <svg data-v-1c9188de="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="text-dark-blue-500">
+                                             <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                          </svg>
+                                       </span>
+                                       <span data-v-1c9188de="" class="order-3">Download sample report</span>
+                                    </a>
+                                 </div>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                     <section data-v-aab4f65d="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative bg-gradient-to-b from-white to-light-blue-50" data-nosnippet="true" id="use-cases">
+                        <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                           <div data-v-aab4f65d="" class="relative lg:text-center">
+                              <!----><!----><!---->
+                              <p data-v-aab4f65d="" class="section-highlight mb-2">How to use the pentesting tool</p>
+                              <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">Use Cases for Google Hacking</h2>
+                              <p data-v-aab4f65d="" data-section-description="" class="text-dark-blue-400 mt-4 max-w-3xl text-xl mx-auto"> Find juicy information indexed by Google about a target website such as directory listing, sensitive files, error messages, login pages, and more. </p>
+                              <!----><!---->
+                           </div>
+                           <div data-v-aab4f65d="" class="mt-10">
+                              <ul class="relative grid gap-8 px-6 lg:grid-cols-3 lg:px-0">
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Target Reconnaissance</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> Google Hacking is a powerful reconnaissance method since it basically searches all information indexed by Google about the target websites/domains. </p>
+                                    </div>
+                                 </li>
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Completely Passive</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> This scan does not interact in any way with the target website. All the information comes directly from Google, without sending any packet to the target. </p>
+                                    </div>
+                                 </li>
+                                 <li data-v-2d2b538d="" class="space-y-5 sm:flex sm:space-y-0 sm:space-x-5">
+                                    <div data-v-2d2b538d="" aria-hidden="true" data-content-media="icon" class="flex-shrink-0 text-white flex h-10 w-10 items-center justify-center rounded-full bg-transparent bg-gradient-to-tl from-primary-accent-500 to-[#F1C40F] ring-4 ring-dark-blue-100">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-2d2b538d="" data-content-block="" class="">
+                                       <h3 data-v-1f740d66="" data-content-block-title="" class="text-xl font-medium tracking-tight text-dark-blue-500">Advanced Search Operators</h3>
+                                       <p data-v-8f018f68="" data-content-block-body="" class="text-dark-blue-400"> The Google Hacking tool uses advanced Google search operators (Google Hacking dorks). It tries to discover vulnerabilities and misconfigurations indexed by Google. </p>
+                                    </div>
+                                 </li>
+                              </ul>
+                             
+                        </div>
+                        <!----><!---->
+                     </section>
+                     <article data-v-aab4f65d="" data-v-b0bdac2c="" class="py-10 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden bg-light-blue-50" data-nosnippet="true" id="technical-details">
+                        <div data-v-aab4f65d="" class="mx-auto max-w-xl lg:max-w-7xl px-5 xl:px-20">
+                           <div data-v-aab4f65d="" class="relative text-center">
+                              <!----><!----><!---->
+                              <p data-v-aab4f65d="" class="section-highlight mb-2">Google Hacking</p>
+                              <h2 data-v-aab4f65d="" class="font-extrabold tracking-tight dark:text-white text-dark-blue-700 text-3xl leading-8 sm:text-4xl">Technical details</h2>
+                              <!----><!----><!---->
+                           </div>
+                           <div data-v-aab4f65d="" class="mt-10">
+                              <div data-v-b0bdac2c="" class="prose prose-brand mx-auto max-w-3xl">
+                                 <p> Every penetration test should start with a passive reconnaissance phase. Public search engines gather amounts of information about almost every website from the Internet. It's a good idea to make specific queries and get relevant data. Use them to discover sensitive information or data that’s not supposed to be public. </p>
+                                 <p>Google has a set of advanced search operators to use and find interesting information about a target website or domain.</p>
+                                 <p> Our free tool aggregates different Google dorks sources you can use to extract sensitive information. <a href="https://www.exploit-db.com/google-hacking-database" rel="external nofollow noopener noreferrer" target="_blank">Discover more Google dorks here</a>. </p>
+                                 <div data-v-03e66307="" data-testid="alert" class="alert flex space-x-3 rounded-md border-transparent p-4 info not-prose">
+                                    <div data-v-03e66307="" data-testid="icon" class="flex-shrink-0" aria-hidden="true">
+                                       <svg data-v-03e66307="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="alert-icon">
+                                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                       </svg>
+                                    </div>
+                                    <div data-v-03e66307="">
+                                       <div data-v-03e66307="" class="space-y-2">
+                                          <!---->
+                                          <div data-v-03e66307="" data-testid="alert-body" class="alert-body space-y-1 text-sm">Your browser must allow popups.</div>
+                                       </div>
+                                       <!---->
+                                    </div>
+                                 </div>
+                                 <h3 id="parameters">Parameters</h3>
+                                 <div data-v-db29e885="" class="flex flex-col not-prose">
+                                    <div data-v-db29e885="" class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                       <div data-v-db29e885="" class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                                          <div data-v-db29e885="" class="shadow border-gray-200 border sm:rounded-lg overflow-hidden">
+                                             <table data-v-db29e885="" class="min-w-full divide-y divide-gray-200">
+                                                <!---->
+                                                <thead data-v-db29e885="">
+                                                   <tr data-v-db29e885="">
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Parameter</span>
+                                                         </div>
+                                                      </th>
+                                                      <th data-v-db29e885="" scope="col" class="">
+                                                         <div class="relative flex flex-row-reverse items-center justify-end">
+                                                            <!----><span class="flex-1">Description</span>
+                                                         </div>
+                                                      </th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody data-v-db29e885="" class="divide-y divide-gray-200 bg-white">
+                                                   <tr>
+                                                      <td><strong>Target website / domain</strong></td>
+                                                      <td> As the name says, this is your target website or domain for which you are querying Google. When you specify a domain name (e.g. <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">adobe.com</code>), Google will return results for all subdomains of <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">adobe.com</code> such as: <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">repo.adobe.com</code>, <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">get.adobe.com</code>, <code class="break-words rounded bg-light-blue-200/30 py-0.5 px-1 text-sm font-medium tracking-tight text-light-blue-800">rmsdemo.adobe.com</code> etc. </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <h3>How it works</h3>
+                                 <p> The Google Hacking tool uses your browser to run queries to Google. Use the free Google dorks to run queries fast and discover interesting information about your targets. </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!----><!---->
+                     </article>
+                  </div>
+                  <!--]--><!--]-->
+               </main>
+               <div class="relative bg-gray-900">
+                  <div aria-hidden="true" class="grid-pattern-new absolute inset-0"></div>
+                  <aside class="relative">
+                     <div class="hidden lg:absolute lg:inset-0 lg:block" aria-hidden="true">
+                        <svg class="h-full w-full text-light-blue-50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2080 700">
+                           <path fill="currentColor" d="M2080 0H0l1040 700"></path>
+                        </svg>
+                     </div>
+                     <div class="relative bg-light-blue-50 lg:bg-transparent">
+                        <div class="mx-auto max-w-7xl px-5 py-10 lg:py-20 xl:px-10">
+                           <div class="relative overflow-hidden rounded-lg shadow-2xl shadow-dark-blue-500/20 bg-white">
+                              
+                              <!---->
+                           </div>
+                        </div>
+                     </div>
+                     <svg class="w-full text-light-blue-50 lg:hidden" aria-hidden="true" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2080 700">
+                        <path fill="currentColor" d="M2080 0H0l1040 700"></path>
+                     </svg>
+                  </aside>
+               </div>
+               <button style="display: none;" type="button" title="Scroll to top" aria-hidden="true" tabindex="-1" class="fixed bottom-5 right-5 z-120 flex h-10 w-10 items-center justify-center rounded-full border border-light-blue-50 bg-white text-dark-blue-600 shadow-md hs:bottom-24 sm:h-11 sm:w-11">
+                  <span class="sr-only">Scroll to top</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-4 w-4 sm:h-5 sm:w-5">
+                     <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+               </button>
+            </div>
+            <!--]-->
+         </div>
+      </div>
+   </body>
+</html>
+
+{% endblock body %}

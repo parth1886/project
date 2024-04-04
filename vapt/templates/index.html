@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+
+
+{% block body %}
+{% load static %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Your Pentesting Arsenal, <span>Ready to go</span></h2>
+          <p>Start a full pentest in minutes with powerful cloud-based tools, </br> plus flexible reporting, automation, and collaboration options.</p>
+          
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="{% static "assets/img/hero-img.svg"%}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+            <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+             <div class="icon-box">
+               <div class="icon"><i class="bi-broadcast"></i></div>
+               <h4 class="title"><a href="/tool2" class="stretched-link">Reconnaissance</a></h4>
+             </div>
+           </div>
+           <!--End Icon Box -->
+ 
+           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+             <div class="icon-box">
+               <div class="icon"><i class="bi-globe"></i></div>
+               <h4 class="title"><a href="/tool5" class="stretched-link">Web Scanners</a></h4>
+             </div>
+           </div>
+           <!--End Icon Box -->
+ 
+           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+             <div class="icon-box">
+               <div class="icon"><i class="bi-hdd-network"></i></div>
+               <h4 class="title"><a href="/tool3" class="stretched-link">Network secnners</a></h4>
+             </div>
+           </div>
+           <!--End Icon Box -->
+ 
+           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+             <div class="icon-box">
+               <div class="icon"><i class="bi-tools"></i></div>
+               <h4 class="title"><a href="/tool6" class="stretched-link">Offensive tools</a></h4>
+             </div>
+           </div>
+           <!--End Icon Box -->
+ 
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+{% endblock body %}

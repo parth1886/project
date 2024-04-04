@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+{% block title %}<h2>Port Scan Results</h2>{% endblock %}
+
+{% block content %}
+<h2>Result:</h2>
+<p>Target host: {{ result.target_host }}</p>
+<p>Open ports: {{ result.open_ports }}</p>
+<p>Scan time: {{ result.scan_time }}</p>
+<h2>Your website all ports are secure</h2>
+{% endblock %}
+{% endblock body %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Lookup Results</title>
+</head>
+<body>
+    <h1>DNS Lookup Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Hostname</th>
+                <th>Provider</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for server in servers %}
+                <tr>
+                    <td>{{ server.ip_address }}</td>
+                    <td>{{ server.hostname }}</td>
+                    <td>{{ server.provider }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    </html>
+        
